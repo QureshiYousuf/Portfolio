@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# 🌟 My Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my portfolio! Here, you'll find a showcase of my skills, projects, and professional journey as a React Developer with over 3 years of experience in building intuitive and responsive web applications.
 
-## Available Scripts
+## 🖥️ Live Portfolio
 
-In the project directory, you can run:
+Check out my portfolio live: [Portfolio](yusufqureshi.online)
 
-### `npm start`
+## 📋 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+About Me
+Skills
+Projects
+Experience
+Contact Me
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 👨‍💻 About Me
 
-### `npm test`
+Hello! I'm a passionate Frontend Developer with expertise in React and JavaScript. I specialize in creating modern, user-friendly interfaces and have contributed to various freelance and professional projects. My mission is to deliver seamless user experiences and efficient web solutions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Skills
 
-### `npm run build`
+Frontend Development: React, JavaScript (ES6+), HTML5, CSS3, TypeScript
+Backend Development: NodeJS, ExpressJS
+DataBase: MongoDB, SQL
+UI Libraries: Tailwind CSS, Material-UI
+State Management: Redux, RTK Query, Context API, React Query
+Version Control: Git, GitHub
+Testing: Jest, React Testing Library
+Build Tools: Webpack, Vite
+Others: REST APIs, Responsive Design, Code Optimization
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Projects
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Instant Cash Pick [View](instantcashpick.com)
+Tech Stack: MERN
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Brief description of the project.
+Key features: Feature 1, Feature 2, Feature 3.
+Role: Developed the UI and integrated API endpoints.
+Project Name 2
+Tech Stack: React, Redux, Firebase
 
-### `npm run eject`
+Brief description of the project.
+Key features: Feature 1, Feature 2, Feature 3.
+Role: Implemented state management and authentication.
+For a full list of projects, visit the Projects section.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📜 Experience
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+System Engineer
+Infosys Pvt Ltd | October-2020 – Present
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### `Roles and Responsibilities`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+• Collaborated with the team to design content and select appropriate
+solutions for creating and maintaining the website.
+• Scheduled meetings with clients to discuss website design preference
+and requirements.
+• Troubleshot website on diﬀerent browsers to determine quality.
+• Collaborated with designers to implement concept and design of
+website.
+• Developed features that were modular, reusable, and scalable.
+• Participated in pre-project analysis and technical assessments to
+validate creation of user-friendly interface.
+• Actively participated in Agile development processes, sprint planning,
+daily stand-up calls and retrospective meetings.
+• Created documentations of all processes to simplify all the phases
+from development to deployment.
+• Debugged issues related to browser compatibility, responsive design,
+and accessibility.
 
-## Learn More
+## 📜 Freelance Experience
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `Features`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+• Instant Cash Pick is an re-commerce platform where users can sell
+their used electronic gadgets like mobile phones, laptops, tablets,
+smartwatches, DSLRs etc to professional buyers.
+• It also oﬀers Services such as mobile repairs, laptop repairs, painting,
+cleaning and more.
 
-### Code Splitting
+### `Responsibilities`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+• Led the end-to-end development process of the Instant Cash Pick
+using the MERN stack (MongoDB, Express.js, React.js, Node.js).
+• Build responsive and interactive user interfaces using modern
+frontend technologies such as React.js, Redux ToolKit, RTK QUery,
+and CSS frameworks Tailwind CSS.
+• Develop robust and scalable backend services using Node.js and
+Express.js.
+• Configured and deployed the web application to the cloud platform
+Hostinger, in Ubuntu Linux Server.
+• Ensured cross-browser compatibility and optimize Front End
+performance for fast loading and smooth user experience.
+• Communicated eﬀectively with clients to understand their business
+requirements, provide project updates, and address any concerns or
+feedback.
 
-### Analyzing the Bundle Size
+## 📞 Contact Me
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+I’m open to new opportunities and collaborations!
 
-### Making a Progressive Web App
+Portfolio: [Portfolio](yusufqureshi.online)
+LinkedIn: [LinkedIn](http://linkedin.com/in/yusufulla-qureshi-7278951ba)
+GitHub: [Git](https://github.com/QureshiYousuf)
+Email: qureshiyusuff@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Feel free to fork this repository, explore my code, and connect with me!**
