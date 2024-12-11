@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const InstantCashPickDetail = () => {
@@ -79,6 +79,10 @@ const InstantCashPickDetail = () => {
     ],
   };
 
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []); // Empty dependency array ensures it runs only once on mount
+
   console.log("Object.entries(features.Purchase)", Object.entries(features));
 
   return (
@@ -90,48 +94,76 @@ const InstantCashPickDetail = () => {
         Back
       </button>
       <div className="relative">
-        {/* <p className="text-3xl text-center font-bold py-5">
-          Instant Cash Pick Detail
-        </p> */}
-        <div className="flex justify-center items-center">
-          <p className="flex flex-col">
-            <span className="text-6xl font-serif font-bold">Instant</span>
-            <span className="text-5xl font-serif font-semibold">Cash Pick</span>
-          </p>
-          <div className="flex justify-center items-center opacity-25">
+        <div className="flex justify-center items-center max-sm:px-2">
+          {/* <p className="flex flex-col">
+            <span className="text-6xl max-sm:text-4xl font-serif font-bold">
+              Instant
+            </span>
+            <span className="text-5xl max-sm:text-3xl font-serif font-semibold">
+              Cash Pick
+            </span>
+          </p> */}
+          <div className="flex justify-center items-center opacity-45">
             <img
               src="/images/ICP/NewLogo.png"
               alt="ICP - Logo"
-              className="w-3/5"
+              className="w-3/5 max-sm:w-4/5"
             />
           </div>
         </div>
-        <div className="bg-black/95 bg-blue-600/50 flex flex-col justify-center items-center border rounded-lg">
+        <div className="bg-sky-500/2 text-black/95 flex flex-col justify-center items-center border rounded-lg">
           {Object.entries(features).map(([key, value, i]) => (
             <div
               key={i}
               //   className="relative py-10 even:bg-violet-200 odd:bg-violet-100 px-4"
               className="relative py-10 w-3/4 text-black= border-b border-b-white px-4"
             >
-              <div className="z-0 w-[2px] h-[500px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45 bg-yellow-500/70"></div>
+              {/* <div className="z-0 w-[2px] h-[500px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45 bg-yellow-500/70"></div> */}
 
-              <p className="font-serif text-4xl text-center font-bold py-4">
+              <div className="w-full flex justify-center">
+                <p
+                  className={`font-serif text-3xl text-center font-bold py-2 w-fit
+                  ${
+                    key === "Purchase" &&
+                    "text-black-700/80 border bg-black text-white px-4 rounded-xl"
+                  }
+                  ${
+                    key === "Service" &&
+                    "bg-blue-700/80 text-white px-4 rounded-xl"
+                  }
+                  ${
+                    key === "Recycle" &&
+                    "bg-green-700/80 text-white px-4 rounded-xl"
+                  }
+                  `}
+                >
+                  {key}
+                </p>
+              </div>
+
+              {/* <span className="absolute opacity-5 text-9xl max-sm:text-5xl top-1/2 left-1/2">
                 {key}
-              </p>
+              </span> */}
               {value.map((list) => (
                 <div className=" flex flex-col odd:items-end py-5">
                   {Object.entries(list).map(([itemKey, itemValue]) => (
-                    <div>
-                      <p className="text-xl py-2 font-serif font-semibold">
+                    <div className="relative">
+                      <span className="absolute lg:hidden opacity-5 text-5xl top-1/2 left-1/2 trasform -translate-x-1/2">
+                        {key}
+                      </span>
+                      <p className="text-xl py-2 font-serif font-semibold text-black">
                         {itemKey}
                       </p>
-                      {itemValue.map((listItem) => (
-                        <p>- {listItem}</p>
-                      ))}
+                      <div className="space-y-1">
+                        {itemValue.map((listItem) => (
+                          <p>- {listItem}</p>
+                        ))}
+                      </div>
                     </div>
                   ))}
                 </div>
               ))}
+              <hr />
             </div>
           ))}
         </div>

@@ -63,7 +63,9 @@ const SidebarWithPlane = () => {
 
   return (
     <div className="flex">
-      <p className="absolute top-5 left-5 font-serif">Yusufulla Qureshi.</p>
+      <p className="absolute text-xl max-sm:text-sm top-5 left-5 font-serif">
+        Yusufulla Qureshi.
+      </p>
       {/* Sidebar */}
       {/* <div className="fixed top-0 left-0 h-screen w-20 flex flex-col items-center justify-center ">
         <div className="relative w-full flex flex-col items-center">

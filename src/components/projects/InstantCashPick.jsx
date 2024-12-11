@@ -24,7 +24,8 @@ const InstantCashPick = () => {
         Instant Cash Pick
       </p>
 
-      <div className="z-20 relative w-full h-[400px] max-md:h-fit flex justify-center items-center max-md:flex-col max-sm:gap-5">
+      {/* <div className="z-20 relative w-full h-[400px] max-md:h-fit flex justify-center items-center max-md:flex-col max-sm:gap-5"> */}
+      <div className="z-20 relative w-full h-[450px] max-md:h-fit flex justify-center items-center max-md:flex-col max-sm:gap-5">
         {/* Center Image */}
         <img
           src="/images/ICP/ICP - Home.png"

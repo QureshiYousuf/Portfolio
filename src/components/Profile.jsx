@@ -131,6 +131,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import profileImage from "./profilecut.PNG";
 
 const Profile = ({
   scrollToSection,
@@ -170,7 +171,8 @@ const Profile = ({
         }`}
       >
         <img
-          src="/profilecut.png"
+          // src="/profilecut.PNG"
+          src={profileImage}
           alt="Profile"
           className={`rounded-full object-cover transition-all ${
             scrolled
@@ -267,7 +269,7 @@ const Profile = ({
               >
                 Projects
               </button>
-              <button
+              {/* <button
                 onClick={() => {
                   scrollToSection(educationRef);
                   setIsMenuOpen(false);
@@ -275,7 +277,7 @@ const Profile = ({
                 className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
               >
                 Education
-              </button>
+              </button> */}
             </div>
           )}
         </div>
@@ -302,12 +304,12 @@ const Profile = ({
           >
             Projects
           </button>
-          <button
+          {/* <button
             onClick={() => scrollToSection(educationRef)}
             className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600"
           >
             Education
-          </button>
+          </button> */}
         </div>
       )}
     </div>

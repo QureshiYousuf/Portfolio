@@ -62,35 +62,36 @@ const Home = () => {
 
         {/* Content Section with scroll animation*/}
         {scrolled && (
-          <div className="mt-[7%] mb-[2%] flex flex-col items-center justify-center w-full">
+          <div className="mt-[7%] pb-[2%] flex flex-col items-center justify-center w-full">
             <div
               ref={skillsRef}
+              // ref2={educationRef}
               // className="pt-[] py-10 h-screen max-md:h-fit px-6 bg-blue-600/10"
-              className="pt-[] py-10 h-screen max-md:h-fit bg-blue-600/10"
+              className="pt-[] py-10 h-fit w-full max-md:h-fit bg-blue-600/10"
             >
               <Skills />
             </div>
             <div
               ref={experienceRef}
-              className="pt-[] py-10 h-screen max-md:h-fit px-6"
+              className="h-auto py-10 mb-5 max-md:h-fit px-6"
               // className="pt-[] py-10 h-screen max-md:h-fit"
             >
               <ProfessionalExperience />
             </div>
             <div
               ref={projectsRef}
-              className="pt-[] py-10 h-fit max-md:h-fit px-6 bg-blue-600/10"
+              className="pt-[] py-10 lg:h-screen md:h-screen max-md:h-fit px-6 bg-blue-600/10"
               // className="pt-[] py-10 h-fit max-md:h-fit bg-blue-600/10"
             >
               <Projects />
             </div>
-            <div
+            {/* <div
               ref={educationRef}
               className="pt-[] py-10 h-screen max-md:h-fit px-6 max-sm:px-2"
               // className="pt-[] py-10 h-screen max-md:h-fit"
             >
               <Education />
-            </div>
+            </div> */}
           </div>
         )}
       </div>

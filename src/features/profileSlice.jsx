@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useRef } from "react";
 
 const initialState = {
   scroll: false,
@@ -9,6 +10,9 @@ const profilesSlice = createSlice({
   initialState,
   reducers: {
     scrollToggle(state, action) {
+      state.scroll = action.payload;
+    },
+    scrollToSection(state, action) {
       state.scroll = action.payload;
     },
   },

@@ -10,13 +10,14 @@ const Footer = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
+
   return (
-    <div className="relative flex max-md:flex-col max-md:gap-10 justify-around items-center h-fit text-sm py-5 bg-blue-600/30">
+    <div className="relative pb-8 max-sm:pb-12 flex max-md:flex-col max-md:gap-10 justify-around items-center h-fit text-sm py-5 bg-blue-600/30">
       {/* Links */}
       <div>
         <ul className="flex flex-col max-md:flex-row gap-5 items-start text-xl px-4">
           <li key={`linkedin`} className="flex items-center gap-2">
-            <Link to={`Http://linkedin.com/in/yusufulla-qureshi-7278951ba`}>
+            <Link to={`https://linkedin.com/in/yusufulla-qureshi-7278951ba`}>
               <IoLogoLinkedin />
             </Link>
             <span className="text-sm">LinkedIn</span>
@@ -56,12 +57,12 @@ const Footer = () => {
           <span>+91 6363821097</span>
         </p>
       </div>
-      <div className="px-4">
+      <div className="px-4 max-sm:px-0">
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="flex flex-col justify-center gap-2">
             <label htmlFor="contact-me" className="text-xl font-serif">
               {/* Contact Me */}
-              Collab..?
+              Stay In Touch.
             </label>
             <div className="border flex justify-center items-center bg-white overflow-hidden rounded">
               <div>
@@ -97,6 +98,10 @@ const Footer = () => {
           </div>
         </form>
       </div>
+      <p className="absolute bottom-2 max-sm:bottom-3 font-sans max-sm:text-xs">
+        <span>@2024 All rights reserved.</span>
+        <span className=""> Yusufulla Qureshi.</span>
+      </p>
     </div>
   );
 };
