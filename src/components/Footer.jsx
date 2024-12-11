@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FaGitSquare } from "react-icons/fa";
+import {
+  FaEnvelope,
+  FaGitSquare,
+  FaPhoneAlt,
+  FaUserEdit,
+} from "react-icons/fa";
 import { IoLogoLinkedin, IoIosCall } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa6";
 import { MdEmail, MdLocationOn } from "react-icons/md";
@@ -14,7 +19,10 @@ const Footer = () => {
     from_email: "",
     message: "",
   });
-  const [status, setStatus] = useState("");
+
+  const [buttonLoading, setButtonLoading] = useState("");
+  const [primaryEmailStatus, setPrimaryEmailStatus] = useState("");
+  const [secondaryMailStatus, setSecondaryMailStatus] = useState("");
 
   console.log("formData", formData);
 
@@ -63,6 +71,8 @@ const Footer = () => {
     e.preventDefault();
     console.log("New handle");
 
+    setButtonLoading(true);
+
     emailjs
       .send(
         "service_b4z2ny7", // Replace with your EmailJS service ID
@@ -73,7 +83,8 @@ const Footer = () => {
       .then(
         (response) => {
           console.log("response from Email:", response);
-          setStatus("Message sent successfully!");
+          setPrimaryEmailStatus(`Email sent successfully to Qureshi!`);
+          setButtonLoading(false);
           emailjs
             .send(
               "service_b4z2ny7", // Replace with your EmailJS service ID
@@ -81,6 +92,7 @@ const Footer = () => {
               {
                 to_email: formData.from_email,
                 to_name: formData.from_name,
+                cc_email: "qureshiyusuff@gmail.com",
                 from_name: "Qureshi",
                 message:
                   "Thank You for contacting Me. I shall get back to you as soon as possible..!!",
@@ -89,18 +101,20 @@ const Footer = () => {
             )
             .then(
               (response) => {
-                console.log("response while sending to sender:", response);
-                setStatus("Message sent successfully!");
+                console.log("response while sending to send:", response);
+                setSecondaryMailStatus(
+                  `Email sent successfully to ${formData.from_name}!`
+                );
               },
               (error) => {
                 console.error("Failed to send Email:", error);
-                setStatus("Failed to send message.");
+                setSecondaryMailStatus("Failed to send message.");
               }
             );
         },
         (error) => {
           console.error("Failed to send Email:", error);
-          setStatus("Failed to send message.");
+          setPrimaryEmailStatus("Failed to send message.");
         }
       );
   };
@@ -108,7 +122,7 @@ const Footer = () => {
   return (
     <div className="relative mx-8 my-4 max-sm:mx-2 max-sm:my-3 rounded-lg pb-8 max-sm:pb-12 flex max-md:flex-col max-md:gap-10 justify-around items-center h-fit text-sm py-5 bg-blue-600/30">
       {/* Links */}
-      <div>
+      <div id="social-links">
         <ul className="flex flex-col max-md:flex-row gap-5 items-start text-xl px-4">
           <li key={`linkedin`} className="flex items-center gap-2">
             <Link to={`https://linkedin.com/in/yusufulla-qureshi-7278951ba`}>
@@ -130,29 +144,59 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col items-start justify-end gap-4">
+
+      {/* Contact Detail */}
+      <div
+        id="contact-details"
+        className="flex flex-col items-start justify-start gap-4"
+      >
         <p className="text-2xl font-serif">Contact</p>
-        <p className="flex justify-center items-center gap-2">
+        {/* <p className="flex justify-center items-center gap-1">
           <span className="text-lg">
             <MdLocationOn />
           </span>
-          <span>Karnataka, Bangalore - 360032</span>
-        </p>
-        <p className="flex justify-center items-center gap-2">
-          <span className="text-lg">
-            <MdEmail />
-          </span>
-          <span>qureshiyusuff@gmail.com</span>
-        </p>
-        <p className="flex justify-center items-center gap-2">
-          <span className="text-lg">
-            <IoIosCall />
-          </span>
-          <span>+91 6363821097</span>
-        </p>
+          <span>Karnataka, Bangalore - 560032</span>
+        </p> */}
+
+        <div className="flex flex-col items-start justify-start gap-4">
+          {/* Address */}
+          <a
+            href="https://www.google.com/maps?q=Karnataka,+Bangalore+560032"
+            className="flex items-center gap-2 text-sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>
+              <MdLocationOn size={18} />
+            </span>
+            <span>Karnataka, Bangalore - 560032</span>
+          </a>
+
+          {/* <MdEmail /> */}
+          {/* Email */}
+          <a
+            href="mailto:qureshiyusuff@gmail.com"
+            className="flex items-center gap-2 text-sm"
+          >
+            <span>
+              <FaEnvelope />
+            </span>
+            <span>qureshiyusuff@gmail.com</span>
+          </a>
+
+          {/* Phone */}
+          <a href="tel:6363821097" className="flex items-center gap-2 text-sm">
+            {/* <IoIosCall /> */}
+            <span className="text-lg">
+              <FaPhoneAlt />
+            </span>
+            <span>+91 6363821097</span>
+          </a>
+        </div>
       </div>
+
       {/* Form to Stay In Touch */}
-      <div className="px-4 max-sm:px-0">
+      <div id="stayin-touch" className="px-4 max-sm:px-0">
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div>
             <p htmlFor="contact-me" className="text-xl font-serif">
@@ -160,46 +204,55 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-col justify-center gap-2">
-            <label htmlFor="contact-me" className="text-lg font-serif">
-              Name
-            </label>
-            <div className="border flex justify-center items-center bg-white overflow-hidden rounded">
+            <div className="flex items-center max-sm:flex-col gap-2 ">
+              {/* Name Field */}
               <div>
-                <input
-                  type="from_name"
-                  name="from_name"
-                  id="from_name"
-                  placeholder="Your Name"
-                  className="border-r p-2"
-                  value={formData.from_name}
-                  onChange={handleInputChange}
-                />
+                <label htmlFor="contact-me" className="text-lg font-serif">
+                  Name
+                </label>
+                <div className="border bg-white flex justify-center items-center overflow-hidden rounded">
+                  <input
+                    type="from_name"
+                    name="from_name"
+                    id="from_name"
+                    placeholder="Your Name"
+                    className="border-r p-2"
+                    value={formData.from_name}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <div className="bg-white text-lg px-2">
+                    <FaUserEdit />
+                  </div>
+                </div>
               </div>
-              <div className="bg-white text-lg px-2">
-                <MdEmail />
-              </div>
-            </div>
-            <label htmlFor="contact-me" className="text-lg font-serif">
-              Email
-            </label>
-            <div className="border flex justify-center items-center bg-white overflow-hidden rounded">
+
+              {/* Email Field */}
               <div>
-                <input
-                  type="from_email"
-                  name="from_email"
-                  id="from_email"
-                  placeholder="Your Email Address"
-                  className="border-r p-2"
-                  value={formData.from_email}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="bg-white text-lg px-2">
-                <MdEmail />
+                <label htmlFor="contact-me" className="text-lg font-serif">
+                  Email
+                </label>
+                <div className="border flex justify-center items-center bg-white overflow-hidden rounded">
+                  <input
+                    type="from_email"
+                    name="from_email"
+                    id="from_email"
+                    placeholder="Your Email Address"
+                    className="border-r p-2"
+                    value={formData.from_email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <div className="bg-white text-lg px-2">
+                    <MdEmail />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-col justify-center gap-2">
+
+          {/* Message */}
+          <div className="flex flex-col justify-center gap-1">
             <label htmlFor="message" className="text-lg font-serif">
               Message
             </label>
@@ -208,18 +261,35 @@ const Footer = () => {
               name="message"
               id="message"
               placeholder="Leave your message"
-              className="border p-2 rounded"
+              className="border p-2 rounded w-1/2 max-sm:w-full"
               value={formData.message}
               onChange={handleInputChange}
+              required
             />
           </div>
           <div className="">
-            <button className="text-black font-bold bg-blue-50 border border-blue-800/20 px-4 py-2 w-fit text-sm rounded  hover:bg-white hover:text-blue-500">
+            <button
+              className="text-black font-bold bg-blue-50 border border-blue-800/20 px-4 py-2 w-fit text-sm rounded  hover:bg-white hover:text-blue-500
+                          disabled:cursor-none disabled:bg-gray-200"
+              disabled={buttonLoading}
+            >
               Submit
             </button>
           </div>
         </form>
-        {status && <p>{status}</p>}
+        <div className="py-1">
+          <>
+            {primaryEmailStatus && (
+              <div className="flex items-center">
+                <span>{formData.from_name},</span>
+                <span className="text-sm"> {primaryEmailStatus}</span>
+              </div>
+            )}
+            {/* {secondaryMailStatus && (
+              <p className="text-sm">{secondaryMailStatus}</p>
+            )} */}
+          </>
+        </div>
       </div>
       <p className="absolute bottom-2 max-sm:bottom-3 font-sans max-sm:text-xs">
         <span>@2024 All rights reserved.</span>

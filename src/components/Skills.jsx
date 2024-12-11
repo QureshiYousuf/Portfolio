@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact, FaNode } from "react-icons/fa";
+import { FaReact, FaNode, FaPython } from "react-icons/fa";
 import {
   TbBrandJavascript,
   TbBrandRedux,
@@ -106,7 +106,7 @@ const Skills = () => {
       { title: "JIRA", icon: <SiJirasoftware className="text-blue-600" /> },
       {
         title: "Python Basics",
-        icon: <SiJirasoftware className="text-blue-600" />,
+        icon: <FaPython className="text-green-600" />,
       },
       { title: "RESTful APIs", icon: <TbApi /> },
       { title: "Node JS", icon: <FaNode className="text-green-500" /> },
