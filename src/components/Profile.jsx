@@ -38,7 +38,7 @@
 //         }`}
 //       >
 //         <img
-//           src="profilecut.png"
+//           src="/profilecut.png"
 //           alt="Profile"
 //           className={`rounded-full object-cover transition-all ${
 //             scrolled
@@ -159,7 +159,7 @@ const Profile = ({
       id="profile"
       className={`section z-20 fixed top-0 left-0 w-full flex items-center transition-all ${
         scrolled
-          ? "h-16 p-2 shadow-lg py-5 bg-white justify-between pl-5"
+          ? "h-16 p-2 shadow-lg py-5 bg-white justify-between"
           : "h-full justify-center"
       }`}
     >
@@ -170,19 +170,19 @@ const Profile = ({
         }`}
       >
         <img
-          src="profilecut.png"
+          src="/profilecut.png"
           alt="Profile"
           className={`rounded-full object-cover transition-all ${
             scrolled
-              ? "w-12 h-12 "
+              ? "w-10 h-full "
               : "w-72 h-96 rounded-3xl max-sm:w-32 max-sm:h-44"
           }`}
         />
         <h1
           className={`text-violet-800 ${
             !scrolled
-              ? "absolute top-[-90px] text-2xl font-bold text-center max-sm:text-sm max-sm:top-[-150%] w-full"
-              : "text-lg font-serif"
+              ? "absolute top-[-90px] text-2xl font-bold text-center max-sm:text-sm max-sm:top-[-90%] w-full"
+              : "text-lg max-sm:text-sm font-serif"
           }`}
         >
           <span>React Developer with 3+ years experience</span>
@@ -199,7 +199,7 @@ const Profile = ({
 
       {/* Floating Summary Points */}
       {!scrolled && (
-        <div className="absolute w-full h-full top-0 left-0 text-lg max-sm:text-xs">
+        <div className="absolute w-full h-full top-0 left-0 text-lg max-sm:text-xs max-sm:text-[10px] ">
           {/* Top Left */}
           <div className="absolute top-[30%] max-sm:top-[20%] left-[20%] max-sm:left-[10%] text-right max-w-xs max-sm:w-1/4">
             {profileSummary[0]}
@@ -232,20 +232,20 @@ const Profile = ({
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-3xl text-violet-400 focus:outline-none"
+            className="text-3xl max-sm:text-2xl text-violet-400 focus:outline-none"
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
 
           {/* Dropdown Menu */}
           {isMenuOpen && (
-            <div className="absolute top-16 right-0 w-full bg-white shadow-lg flex flex-col items-center gap-4 py-4">
+            <div className="absolute top-16 right-0 w-full max-sm:w-fit bg-white shadow-lg flex flex-col items-center gap-4 py-4 max-sm:px-4">
               <button
                 onClick={() => {
                   scrollToSection(skillsRef);
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4"
+                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
               >
                 Skills
               </button>
@@ -254,7 +254,7 @@ const Profile = ({
                   scrollToSection(experienceRef);
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4"
+                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
               >
                 Experience
               </button>
@@ -263,7 +263,7 @@ const Profile = ({
                   scrollToSection(projectsRef);
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4"
+                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
               >
                 Projects
               </button>
@@ -272,7 +272,7 @@ const Profile = ({
                   scrollToSection(educationRef);
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4"
+                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
               >
                 Education
               </button>

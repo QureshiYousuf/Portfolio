@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import InstantCashPickDetail from "./InstantCashPickDetail";
 import { useNavigate } from "react-router-dom";
+import { GrFormView, GrFormViewHide } from "react-icons/gr";
 
 const InstantCashPick = () => {
   const [showMore, setShowMore] = useState(false);
   const navigate = useNavigate();
+  const [isHovered, setIsHovered] = useState(false);
 
   const details = [
     `Instant Cash Pick is an re-commerce platform where users can sell their used electronic gadgets.`,
@@ -13,18 +15,12 @@ const InstantCashPick = () => {
     `Device recycling for co-friendly disposal and recycling services for old or broken mobiles phones and laptops.`,
   ];
 
-  const detailStyle = {
-    "top-normal": `absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-white w-fit p-4
-             rounded-lg shadow-inner shadow-blue-600/30`,
-    "top-medium": `text-center bg-white w-fit p-4 rounded-lg shadow-inner shadow-blue-600/30`,
-  };
-
   return (
-    <div className="relative flex flex-col items-center justify-center gap-5 p-8 ">
+    <div className="relative flex flex-col items-center justify-center gap-5 p-8 max-sm:p-2">
       <div className="absolute flex justify-center items-center z-0 opacity-20">
         <img src="/images/ICP/NewLogo.png" alt="ICP - Logo" className="w-3/4" />
       </div>
-      <p className=" text-3xl text-center font-serif font-bold mb-8">
+      <p className=" text-3xl max-sm:text-2xl text-center font-serif font-bold mb-8">
         Instant Cash Pick
       </p>
 
@@ -40,7 +36,7 @@ const InstantCashPick = () => {
         <div
           className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center bg-white w-fit p-4
             rounded-lg shadow-inner shadow-blue-600/30
-            max-md:w-full max-md:static max-md:-translate-y-0 max-md:translate-x-0"
+            max-md:w-full max-md:static max-md:-translate-y-0 max-md:translate-x-0 max-sm:text-sm max-sm:p-2"
           //   className={`w-full text-center`}
         >
           <p>{details[0]}</p>
@@ -50,7 +46,7 @@ const InstantCashPick = () => {
         <div
           className="absolute top-1/2 right-52 transform -translate-y-1/2 translate-x-1/2 text-center w-1/4 bg-white p-4
             rounded-lg shadow-inner shadow-blue-600/30
-            max-md:w-full max-md:static max-md:-translate-y-0 max-md:translate-x-0"
+            max-md:w-full max-md:static max-md:-translate-y-0 max-md:translate-x-0 max-sm:text-sm"
         >
           <p>{details[1]}</p>
         </div>
@@ -66,7 +62,7 @@ const InstantCashPick = () => {
         <div
           className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 text-center w-fit bg-white p-4
             rounded-lg shadow-inner shadow-blue-600/30
-            max-md:w-full max-md:static max-md:-translate-y-0 max-md:translate-x-0"
+            max-md:w-full max-md:static max-md:-translate-y-0 max-md:translate-x-0 max-sm:text-sm"
         >
           <p>{details[2]}</p>
         </div>
@@ -75,23 +71,26 @@ const InstantCashPick = () => {
         <div
           className="absolute top-1/2 left-52 transform -translate-y-1/2 -translate-x-1/2 text-center w-1/4 bg-white p-4
             rounded-lg shadow-inner shadow-blue-600/30
-            max-md:w-full max-md:static max-md:-translate-y-0 max-md:translate-x-0"
+            max-md:w-full max-md:static max-md:-translate-y-0 max-md:translate-x-0 max-sm:text-sm"
         >
           <p>{details[3]}</p>
         </div>
       </div>
 
-      {/* {!showMore && ( */}
       <button
+        onMouseEnter={() => setIsHovered(true)} // Set hover state on mouse enter
+        onMouseLeave={() => setIsHovered(false)} // Reset hover state on mouse leave
         onClick={() => {
           setShowMore((prev) => !prev);
           navigate(`/project/${`InstantCashPick`}`);
         }}
-        className="z-20 mt-5 border rounded text-white bg-violet-500 hover:bg-violet-600 px-4 py-2"
+        className="z-20 mt-5 border rounded text-white bg-violet-500 hover:bg-violet-600 px-4 py-2 flex items-center justify-center gap-1"
       >
-        View Complete Project
+        <span>View Complete Project</span>
+        <span className="text-2xl">
+          {isHovered ? <GrFormView /> : <GrFormViewHide />}
+        </span>
       </button>
-      {/* )} */}
 
       {showMore && <InstantCashPickDetail />}
     </div>

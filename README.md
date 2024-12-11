@@ -12,7 +12,7 @@ About Me\
 Skills\
 Projects\
 Experience\
-Contact Me\
+Contact Me
 
 ## 👨‍💻 About Me
 
@@ -29,11 +29,11 @@ State Management: Redux, RTK Query, Context API, React Query\
 Version Control: Git, GitHub\
 Testing: Jest, React Testing Library\
 Build Tools: Webpack, Vite\
-Others: REST APIs, Responsive Design, Code Optimization\
+Others: REST APIs, Responsive Design, Code Optimization
 
 ## 🚀 Projects
 
-Instant Cash Pick [View](https://instantcashpick.com)
+Instant Cash Pick [View](https://instantcashpick.com)\
 Tech Stack: MERN
 
 Brief description of the project.
@@ -61,7 +61,7 @@ Hostinger, in Ubuntu Linux Server.\
 performance for fast loading and smooth user experience.\
 • Communicated eﬀectively with clients to understand their business
 requirements, provide project updates, and address any concerns or
-feedback.\
+feedback.
 
 **For a full list of projects, visit the Projects section.**
 
@@ -87,9 +87,7 @@ daily stand-up calls and retrospective meetings.\
 • Created documentations of all processes to simplify all the phases
 from development to deployment.\
 • Debugged issues related to browser compatibility, responsive design,
-and accessibility.\
-
-## 📜 Freelance Experience
+and accessibility.
 
 ## 📞 Contact Me
 

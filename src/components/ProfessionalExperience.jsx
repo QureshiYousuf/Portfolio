@@ -58,7 +58,7 @@ const ProfessionalExperience = () => {
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col gap-16">
-        <p className="text-4xl -top-[10%] text-center font-serif font-bold">
+        <p className="text-4xl -top-[10%] text-center font-serif font-bold max-sm:text-2xl">
           Professional Experience
         </p>
         <div className=" flex flex-col gap-24">
@@ -83,7 +83,7 @@ const ProfessionalExperience = () => {
                       border-t-[320px] border-t-blue-50/30 
                       ${
                         index % 2 !== 0
-                          ? "border-r-[300px] border-r-blue-300/30 "
+                          ? "border-r-[300px] border-r-blue-300/30  max-sm:border-r-[200px]"
                           : "border-l-[300px] border-l-blue-300/30 "
                       }
                       
@@ -93,15 +93,15 @@ const ProfessionalExperience = () => {
                   </>
 
                   <h2 className="z-10 font-serif flex flex-col  px-4 py-2">
-                    <span className="font-bold text-2xl max-md:text-xl">
+                    <span className="font-bold text-2xl max-md:text-xl max-sm:text-lg">
                       {exp.designation}
                     </span>
                     <span className="text-lg text-gray-900 max-md:text-sm">
                       {exp.company}
                     </span>
-                    <span>{exp.duration}</span>
+                    <span className="max-sm:text-sm">{exp.duration}</span>
                   </h2>
-                  <ul className="space-y-4 px-4 py-2">
+                  <ul className="space-y-4 px-4 py-2 z-20">
                     {exp.responsibilities.map((res, i) => (
                       <li
                         key={i}
@@ -114,17 +114,18 @@ const ProfessionalExperience = () => {
                 </div>
                 {/* Company Logo */}
                 <div
-                // className={`${
-                //   index % 2 !== 0
-                //     ? "max-md:hidden"
-                //     : "flex justify-center items-center my-auto"
-                // }`}
+                  // className={`${
+                  //   index % 2 !== 0
+                  //     ? "max-md:hidden"
+                  //     : "flex justify-center items-center my-auto"
+                  // }`}
+                  className="flex justify-center w-full max-sm:w-[75%]"
                 >
                   <img
                     src="infosys-logo2.jpg"
                     alt="infosys-logo"
                     className={`${
-                      index % 2 !== 0 ? "max-md:hidden" : "mt-10 mb-0"
+                      index % 2 !== 0 ? "max-md:hidden" : "mt-10 mb-0 "
                     }`}
                     // className="bg-none aspect-[3/2] object-contain mix-blend-color-burn"
                   />

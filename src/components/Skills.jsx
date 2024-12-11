@@ -85,7 +85,9 @@ const Skills = () => {
 
   return (
     <div className="z-30">
-      <p className="h-full mt-[3%] font-serif text-4xl text-center ">SKILLS</p>
+      <p className="h-full mt-[3%] font-serif text-4xl text-center max-sm:text-2xl">
+        SKILLS
+      </p>
       {/* <div className="flex flex-wrap items-center justify-center gap-5 space-y-10"> */}
       {/* <div className="grid grid-cols-5 items-center justify-center gap-5 space-y-">
         {skills.map((skill) => (
@@ -96,12 +98,12 @@ const Skills = () => {
         ))}
       </div> */}
 
-      <div className=" relative flex flex-col gap-20 text-xl">
+      <div className=" relative flex flex-col gap-20 text-xl max-sm:text-sm max-sm:overflow-hidden px-6">
         {/* Centered Triangle in the Background */}
-        <div className="">
+        <>
           <div
             className="z-0 w-0 h-0 absolute top-1/4 left-3/4 transform -translate-x-1/2 -translate-y-1/2 border-t-[150px] border-t-transparent 
-                        border-r-[290px] border-r-blue-600/30 border-b-[320px] border-b-transparent"
+                        border-r-[290px] border-r-blue-600/30 border-b-[320px] max-sm:border-b-[220px] border-b-transparent"
           ></div>
           <div
             className="z-0 w-0 h-0 absolute top-[80%] left-0 transform -translate-x-1/2 -translate-y-1/2 border-t-[150px] border-t-transparent 
@@ -111,7 +113,8 @@ const Skills = () => {
             className="z-0 w-0 h-0 absolute top-[90%] -right-3/4 transform -translate-x-1/2 border-t-[10px] border-t-transparent 
                         border-r-[390px] border-r-blue-600/30 border-b-[350px] border-b-transparent"
           ></div> */}
-        </div>
+        </>
+
         {rows.map((row, rowIndex) => (
           <div
             key={rowIndex}
@@ -125,7 +128,7 @@ const Skills = () => {
             {row.map((skill, skillIndex) => (
               <div
                 key={skillIndex}
-                className="flex items-center bg-white justify-center gap-1 shadow-xl w-fit border rounded px-4 py-2 "
+                className="flex items-center bg-white justify-center gap-1 shadow-xl w-fit border rounded px-4 py-2 max-sm:text-sm"
               >
                 <p>{skill.title}</p>
                 <span>{skill.icon}</span>

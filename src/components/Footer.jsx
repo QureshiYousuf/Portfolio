@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="relative flex max-md:flex-col max-md:gap-10 justify-around items-center h-fit text-sm py-5 bg-blue-600/30">
       {/* Links */}
       <div>
-        <ul className="flex flex-col gap-5 items-start text-xl px-4">
+        <ul className="flex flex-col max-md:flex-row gap-5 items-start text-xl px-4">
           <li key={`linkedin`} className="flex items-center gap-2">
             <Link to={`Http://linkedin.com/in/yusufulla-qureshi-7278951ba`}>
               <IoLogoLinkedin />
