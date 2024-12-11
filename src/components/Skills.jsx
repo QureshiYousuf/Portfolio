@@ -151,69 +151,40 @@ const Skills = () => {
   }
 
   return (
-    <div className="z-30">
+    <div className="z-30 ">
       <p className="h-full mt-[5%] max-sm:mt-[10%] mb-16 max-sm:mb-5 font-serif text-4xl text-center max-sm:text-2xl">
         SKILLS
       </p>
-      {/* <div className="flex flex-wrap items-center justify-center gap-5 space-y-10"> */}
-      {/* <div className="grid grid-cols-5 items-center justify-center gap-5 space-y-">
-        {skills.map((skill) => (
-          <div className="flex items-center justify-center gap-1 w-fit border rounded px-4 py-2">
-            <p>{skill.title}</p>
-            <span>{skill.icon}</span>
-          </div>
-        ))}
-      </div> */}
 
-      <div className=" relative flex flex-col gap-20 text-xl max-sm:text-sm max-sm:overflow-hidden px-6">
+      <div className="relative flex flex-col gap-20 text-xl max-sm:text-sm max-sm:overflow-hidden px-6">
         {/* Centered Triangle in the Background */}
         <>
           <div
             className="z-0 w-0 h-0 absolute top-1/4 left-3/4 transform -translate-x-1/2 -translate-y-1/2 border-t-[150px] border-t-transparent 
                         border-r-[290px] border-r-blue-600/30 border-b-[320px] max-sm:border-b-[220px] border-b-transparent"
           ></div>
+
           <div
             className="z-0 w-0 h-0 absolute top-[80%] left-0 transform -translate-x-1/2 -translate-y-1/2 border-t-[150px] border-t-transparent 
                         border-l-[290px] border-l-blue-600/30 border-b-[320px] border-b-transparent"
           ></div>
+
           {/* <div
             className="z-0 w-0 h-0 absolute top-[90%] -right-3/4 transform -translate-x-1/2 border-t-[10px] border-t-transparent 
                         border-r-[390px] border-r-blue-600/30 border-b-[350px] border-b-transparent"
           ></div> */}
         </>
 
-        {/* {rows.map((row, rowIndex) => (
-          <div
-            key={rowIndex}
-            className={`grid grid-cols-5 max-md:grid-cols-2 gap-5 even:place-items-center`}
-            // className={`grid grid-cols-5 max-md:grid-cols-2 gap-5 items-center justify-center ${
-            //   rowIndex % 2 === 0
-            //     ? "md:animate-right-to-left-infinite max-md:animate-bounce"
-            //     : "md:animate-left-to-right-infinite max-md:animate-bounce"
-            // }`}
-          >
-            {row.map((skill, skillIndex) => (
-              <div
-                key={skillIndex}
-                className="flex items-center bg-white justify-center gap-1 shadow-xl w-fit border rounded px-4 py-2 max-sm:text-sm"
-              >
-                <p>{skill.title}</p>
-                <span>{skill.icon}</span>
-              </div>
-            ))}
-          </div>
-        ))} */}
-
         {/* Skills */}
-        <div className="flex justify-center w-full">
-          <div className="flex justify-center gap-5 w-4/5 max-sm:w-full  max-md:flex-col">
+        <div className="z-10 flex justify-center w-full">
+          <div className="flex justify-center gap-5 w-4/5 max-sm:w-full max-md:flex-col">
             {/* Core Skills */}
-            <div className="px-2 py-4 border-r max-sm:px-1 w-1/2 max-md:w-full">
+            <div className="px-2 py-4 border-r max-sm:border-r-0 max-sm:px-1 w-1/2 max-md:w-full">
               <p className="py-1 mb-3 border-b  border-b-black w-fit">
                 Core Skills
               </p>{" "}
               {/* <div className="grid grid-cols-4 gap-10 text-[16px]"> */}
-              <div className="flex flex-wrap gap-10 text-[16px] max-sm:text-[10px]">
+              <div className="flex flex-wrap gap-10 max-sm:gap-4 text-[16px] max-sm:text-[10px]">
                 {skillSet.coreSkills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
@@ -231,7 +202,7 @@ const Skills = () => {
                 Other Skills
               </p>
               {/* <div className="grid grid-cols-3 gap-10 text-sm"> */}
-              <div className="flex flex-wrap gap-10 text-[16px] max-sm:text-xs">
+              <div className="flex flex-wrap gap-10 max-sm:gap-4 text-[16px] max-sm:text-xs">
                 {skillSet.otherSkills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
@@ -261,9 +232,8 @@ const Skills = () => {
                   className={`z-0 w-0 h-0 absolute top-1/4 transform -translate-x-1/2 -translate-y-1/2 
                     ${
                       i == 0
-                        ? "right-1/2 border-t-[110px] border-l-[170px] border-l-blue-600/30 border-b-[70px]"
-                        : // "bottom-0  border-b-blue-600/30 border-b-[70px]"
-                          "left-3/4 border-t-[100px] border-r-[170px] border-r-blue-600/30 border-b-[60px]"
+                        ? "right-1/2 border-t-[110px] border-l-[170px] border-l-blue-600/30 border-b-[70px] max-sm:border-t-[55px] max-sm:border-l-[85px] max-sm:border-b-[35px]"
+                        : "left-3/4 border-t-[100px] border-r-[170px] border-r-blue-600/30 border-b-[60px] max-sm:border-t-[50px] max-sm:border-r-[85px] max-sm:border-b-[30px]"
                     }
                     border-t-transparent  border-b-transparent`}
                 ></div>
@@ -282,3 +252,27 @@ const Skills = () => {
 };
 
 export default Skills;
+
+{
+  /* {rows.map((row, rowIndex) => (
+          <div
+            key={rowIndex}
+            className={`grid grid-cols-5 max-md:grid-cols-2 gap-5 even:place-items-center`}
+            // className={`grid grid-cols-5 max-md:grid-cols-2 gap-5 items-center justify-center ${
+            //   rowIndex % 2 === 0
+            //     ? "md:animate-right-to-left-infinite max-md:animate-bounce"
+            //     : "md:animate-left-to-right-infinite max-md:animate-bounce"
+            // }`}
+          >
+            {row.map((skill, skillIndex) => (
+              <div
+                key={skillIndex}
+                className="flex items-center bg-white justify-center gap-1 shadow-xl w-fit border rounded px-4 py-2 max-sm:text-sm"
+              >
+                <p>{skill.title}</p>
+                <span>{skill.icon}</span>
+              </div>
+            ))}
+          </div>
+        ))} */
+}

@@ -67,7 +67,7 @@ const Home = () => {
               ref={skillsRef}
               // ref2={educationRef}
               // className="pt-[] py-10 h-screen max-md:h-fit px-6 bg-blue-600/10"
-              className="pt-[] py-10 h-fit w-full max-md:h-fit bg-blue-600/10"
+              className="pt-[] py-10 h-fit w-fit max-md:h-fit bg-blue-600/10 mx-12 max-sm:mx-4 rounded-lg"
             >
               <Skills />
             </div>
@@ -80,7 +80,7 @@ const Home = () => {
             </div>
             <div
               ref={projectsRef}
-              className="pt-[] py-10 lg:h-screen md:h-screen max-md:h-fit px-6 bg-blue-600/10"
+              className="pt-[] py-10 lg:h-screen md:h-screen max-md:h-fit px-6 bg-blue-600/10 mx-12 max-sm:mx-4 rounded-lg"
               // className="pt-[] py-10 h-fit max-md:h-fit bg-blue-600/10"
             >
               <Projects />

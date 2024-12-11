@@ -234,7 +234,7 @@ const Profile = ({
         <div className="md:hidden">
           <button
             onClick={toggleMenu}
-            className="text-3xl max-sm:text-2xl text-violet-400 focus:outline-none"
+            className="text-3xl max-sm:text-xl text-violet-400 focus:outline-none"
           >
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -247,7 +247,7 @@ const Profile = ({
                   scrollToSection(skillsRef);
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
+                className="px-4 py-2 max-sm:py-1 max-sm:text-sm bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
               >
                 Skills
               </button>
@@ -256,7 +256,7 @@ const Profile = ({
                   scrollToSection(experienceRef);
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
+                className="px-4 py-2 max-sm:py-1 max-sm:text-sm bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
               >
                 Experience
               </button>
@@ -265,7 +265,7 @@ const Profile = ({
                   scrollToSection(projectsRef);
                   setIsMenuOpen(false);
                 }}
-                className="px-4 py-2 bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
+                className="px-4 py-2 max-sm:py-1 max-sm:text-sm bg-violet-400 text-white rounded-md hover:bg-violet-600 w-3/4 max-sm:w-full"
               >
                 Projects
               </button>
