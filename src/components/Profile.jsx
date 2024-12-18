@@ -183,7 +183,7 @@ const Profile = ({
         <h1
           className={`text-violet-800 ${
             !scrolled
-              ? "absolute top-[-90px] text-2xl font-bold text-center max-sm:text-sm max-sm:top-[-90%] w-full"
+              ? "absolute top-[-90px] text-2xl font-bold text-center max-sm:text-sm max-sm:top-[-96%] w-full"
               : "text-lg max-sm:text-sm font-serif"
           }`}
         >
@@ -203,11 +203,11 @@ const Profile = ({
       {!scrolled && (
         <div className="absolute w-full h-full top-0 left-0 text-lg max-sm:text-xs max-sm:text-[10px] ">
           {/* Top Left */}
-          <div className="absolute top-[30%] max-sm:top-[20%] left-[20%] max-sm:left-[10%] text-right max-w-xs max-sm:w-1/4">
+          <div className="absolute top-[30%] max-sm:top-[17%] left-[20%] max-sm:left-[10%] text-right max-w-xs max-sm:w-1/4">
             {profileSummary[0]}
           </div>
           {/* Top Right */}
-          <div className="absolute top-[30%] max-sm:top-[20%] right-[20%] max-sm:right-[10%] text-left  max-w-xs max-sm:w-1/4">
+          <div className="absolute top-[30%] max-sm:top-[17%] right-[20%] max-sm:right-[10%] text-left  max-w-xs max-sm:w-1/4">
             {profileSummary[1]}
           </div>
           {/* Left Center */}
@@ -219,11 +219,11 @@ const Profile = ({
             {profileSummary[3]}
           </div>
           {/* Bottom Left */}
-          <div className="absolute bottom-[30%] max-sm:bottom-[20%] left-[20%] max-sm:left-[10%] text-right  max-w-xs max-sm:w-1/4">
+          <div className="absolute bottom-[30%] max-sm:bottom-[17%] left-[20%] max-sm:left-[10%] text-right  max-w-xs max-sm:w-1/4">
             {profileSummary[4]}
           </div>
           {/* Bottom Right */}
-          <div className="absolute bottom-[30%] max-sm:bottom-[20%] right-[20%] max-sm:right-[10%] text-left  max-w-xs max-sm:w-1/4">
+          <div className="absolute bottom-[30%] max-sm:bottom-[17%] right-[20%] max-sm:right-[10%] text-left  max-w-xs max-sm:w-1/4">
             {profileSummary[5]}
           </div>
         </div>

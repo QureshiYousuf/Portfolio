@@ -207,7 +207,7 @@ const Footer = () => {
             <div className="flex items-center max-sm:flex-col gap-2 ">
               {/* Name Field */}
               <div>
-                <label htmlFor="contact-me" className="text-lg font-serif">
+                <label htmlFor="contact-me" className="text-lg font-serif max-sm:text-[16px]">
                   Name
                 </label>
                 <div className="border bg-white flex justify-center items-center overflow-hidden rounded">
@@ -216,12 +216,12 @@ const Footer = () => {
                     name="from_name"
                     id="from_name"
                     placeholder="Your Name"
-                    className="border-r p-2"
+                    className="border-r p-2 max-sm:p-x-2 max-sm:py-1 max-sm:text-sm"
                     value={formData.from_name}
                     onChange={handleInputChange}
                     required
                   />
-                  <div className="bg-white text-lg px-2">
+                  <div className="bg-white text-lg max-sm:text-sm px-2">
                     <FaUserEdit />
                   </div>
                 </div>
@@ -229,7 +229,7 @@ const Footer = () => {
 
               {/* Email Field */}
               <div>
-                <label htmlFor="contact-me" className="text-lg font-serif">
+                <label htmlFor="contact-me" className="text-lg font-serif max-sm:text-[16px]">
                   Email
                 </label>
                 <div className="border flex justify-center items-center bg-white overflow-hidden rounded">
@@ -238,12 +238,12 @@ const Footer = () => {
                     name="from_email"
                     id="from_email"
                     placeholder="Your Email Address"
-                    className="border-r p-2"
+                    className="border-r p-2 max-sm:p-x-2 max-sm:py-1 max-sm:text-sm"
                     value={formData.from_email}
                     onChange={handleInputChange}
                     required
                   />
-                  <div className="bg-white text-lg px-2">
+                  <div className="bg-white text-lg px-2 max-sm:text-sm">
                     <MdEmail />
                   </div>
                 </div>
@@ -253,7 +253,7 @@ const Footer = () => {
 
           {/* Message */}
           <div className="flex flex-col justify-center gap-1">
-            <label htmlFor="message" className="text-lg font-serif">
+            <label htmlFor="message" className="text-lg font-serif max-sm:text-[16px]">
               Message
             </label>
             <textarea
@@ -261,7 +261,7 @@ const Footer = () => {
               name="message"
               id="message"
               placeholder="Leave your message"
-              className="border p-2 rounded w-1/2 max-sm:w-full"
+              className="border p-2 rounded w-1/2 max-sm:text-sm max-sm:w-full"
               value={formData.message}
               onChange={handleInputChange}
               required
@@ -269,7 +269,7 @@ const Footer = () => {
           </div>
           <div className="">
             <button
-              className="text-black font-bold bg-blue-50 border border-blue-800/20 px-4 py-2 w-fit text-sm rounded  hover:bg-white hover:text-blue-500
+              className="text-black max-sm:text-xs font-bold bg-blue-50 border border-blue-800/20 px-4 py-2 w-fit text-sm rounded  hover:bg-white hover:text-blue-500
                           disabled:cursor-none disabled:bg-gray-200"
               disabled={buttonLoading}
             >
