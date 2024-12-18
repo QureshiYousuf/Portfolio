@@ -308,29 +308,31 @@ const InstantCashPickDetail = () => {
                     animateSlides[key] && "animate-scroll-horizontal"
                   } `}
                 >
-                  {/* {features[key][features[key].length - 1].images.map( */}
-                  {[
+                  {/* {[
                     ...features[key][features[key].length - 1].images,
                     ...features[key][features[key].length - 1].images,
-                  ].map((image, index) => (
-                    <div
-                      className="inline-block text-center w-[300px] flex-none"
-                      key={index}
-                    >
-                      {/* Image */}
-                      <img
-                        src={image.img}
-                        alt={`Screenshot of ${image.label}`}
-                        className="h-auto w-[300px] max-w-full object-cover rounded-lg shadow-md"
-                        style={{ flexShrink: 0 }}
-                      />
+                  ].map((image, index) => ( */}
+                  {features[key][features[key].length - 1].images.map(
+                    (image, index) => (
+                      <div
+                        className="inline-block text-center w-[300px] flex-none"
+                        key={index}
+                      >
+                        {/* Image */}
+                        <img
+                          src={image.img}
+                          alt={`Screenshot of ${image.label}`}
+                          className="h-auto w-[300px] max-w-full object-cover rounded-lg shadow-md"
+                          style={{ flexShrink: 0 }}
+                        />
 
-                      {/* Image Label */}
-                      <span className="text-gray-600 font-medium mb-2">
-                        {image.label}
-                      </span>
-                    </div>
-                  ))}
+                        {/* Image Label */}
+                        <span className="text-gray-600 font-medium mb-2">
+                          {image.label}
+                        </span>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
               <div className={`flex justify-center  my-2`}>
