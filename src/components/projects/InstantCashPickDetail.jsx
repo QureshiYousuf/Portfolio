@@ -327,7 +327,7 @@ const InstantCashPickDetail = () => {
                         />
 
                         {/* Image Label */}
-                        <span className="text-gray-600 font-medium mb-2">
+                        <span className="text-gray-600 font-medium mb-2 max-sm:text-xs">
                           {image.label}
                         </span>
                       </div>

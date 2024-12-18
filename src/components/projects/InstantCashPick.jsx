@@ -199,7 +199,7 @@ const InstantCashPick = () => {
       <p className="text-[12px] max-md:hidden flex gap-1 items-center">
         <span>View Full Project To Know More</span>
         <span>
-          <PiArrowFatLinesDownFill />
+          <PiArrowFatLinesDownFill className="rotate-180" />
         </span>
       </p>
 
