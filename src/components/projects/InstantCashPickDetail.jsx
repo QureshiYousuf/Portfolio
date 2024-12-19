@@ -321,7 +321,7 @@ const InstantCashPickDetail = () => {
                         {/* Image */}
                         <img
                           src={image.img}
-                          alt={`Screenshot of ${image.label}`}
+                          alt={`${image.label}`}
                           className="h-auto w-[300px] max-w-full object-cover rounded-lg shadow-md"
                           style={{ flexShrink: 0 }}
                         />
