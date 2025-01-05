@@ -5,11 +5,6 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
-  const OPENAIKEY =
-    "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";
-
-  //   My OpenAI Key
-  //   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
   const handleSendMessage = async () => {
     if (input.trim() === "") return;
 
@@ -32,7 +27,7 @@ const ChatBot = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${OPENAIKEY}`,
+            // Authorization: `Bearer ${OPENAIKEY}`,
           },
         }
       );
