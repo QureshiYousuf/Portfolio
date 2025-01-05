@@ -33,14 +33,14 @@ Others: REST APIs, Responsive Design, Code Optimization
 
 ## 🚀 Projects
 
-Instant Cash Pick [View](https://instantcashpick.com)\
+Instant Hub [View](https://www.instanthub.in)\
 Tech Stack: MERN
 
 Brief description of the project.
 
 ### `Features`
 
-• Instant Cash Pick is an re-commerce platform where users can sell
+• Instant Hub is an re-commerce platform where users can sell
 their used electronic gadgets like mobile phones, laptops, tablets,
 smartwatches, DSLRs etc to professional buyers.
 • It also oﬀers Services such as mobile repairs, laptop repairs, painting,
@@ -48,7 +48,7 @@ cleaning and more.
 
 ### `Role`
 
-• Led the end-to-end development process of the Instant Cash Pick
+• Led the end-to-end development process of the Instant Hub
 using the MERN stack (MongoDB, Express.js, React.js, Node.js).\
 • Build responsive and interactive user interfaces using modern
 frontend technologies such as React.js, Redux ToolKit, RTK QUery,

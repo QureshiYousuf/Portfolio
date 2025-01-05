@@ -1,5 +1,5 @@
 import React from "react";
-import InstantCashPick from "./InstantCashPick";
+import InstantHub from "./InstantHub";
 import ECommerce from "./ECommerce";
 
 const Projects = () => {
@@ -10,7 +10,7 @@ const Projects = () => {
         <p className="text-4xl -top-[10%] text-center font-serif font-bold">
           Projects
         </p>
-        <InstantCashPick />
+        <InstantHub />
         {/* <ECommerce /> */}
       </div>
     </div>

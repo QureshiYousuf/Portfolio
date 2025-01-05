@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Profile from "./Profile";
 import { FaAnglesDown } from "react-icons/fa6";
 import ProfessionalExperience from "./ProfessionalExperience";
 import { useSelector, useDispatch } from "react-redux";
 import { scrollToggle } from "../features/profileSlice";
 import Skills from "./Skills";
-import Education from "./Education";
-import { Outlet, useNavigate } from "react-router-dom";
+// import Education from "./Education";
+// import { Outlet, useNavigate } from "react-router-dom";
 import Projects from "./projects/Projects";
 
 const Home = () => {
@@ -42,6 +42,9 @@ const Home = () => {
 
   return (
     <>
+      <div className="absolute">
+        {/* <div className="z-50 sticky top-[90%] right-0 bottom-0">Down</div> */}
+      </div>
       <div className="min-h-screen text-black">
         <Profile
           scrollToSection={scrollToSection}

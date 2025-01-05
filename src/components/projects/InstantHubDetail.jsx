@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CgScrollH } from "react-icons/cg";
 
-const InstantCashPickDetail = () => {
+const InstantHubDetail = () => {
   const navigate = useNavigate();
   const [animateSlides, setAnimateSlides] = useState({
     Purchase: true,
@@ -50,17 +50,6 @@ const InstantCashPickDetail = () => {
 
       {
         images: [
-          // "/images/sell/Home.png",
-          // "/images/sell/Brands.png",
-          // "/images/sell/Products.png",
-          // "/images/sell/ProductDetail.png",
-          // "/images/sell/Condition1.png",
-          // "/images/sell/Condition2.png",
-          // "/images/sell/Condition3.png",
-          // "/images/sell/Condition4.png",
-          // "/images/sell/Condition5.png",
-          // "/images/sell/PhoneNumber.png",
-          // "/images/sell/FinalPage.png",
           {
             img: "/images/sell/Home.png",
             label: "Home",
@@ -90,14 +79,6 @@ const InstantCashPickDetail = () => {
             label: "Set of Questions 3",
           },
           {
-            img: "/images/sell/Condition4.png",
-            label: "Set of Questions 4",
-          },
-          {
-            img: "/images/sell/Condition5.png",
-            label: "Set of Questions 5",
-          },
-          {
             img: "/images/sell/PhoneNumber.png",
             label: "Phone Number",
           },
@@ -122,28 +103,28 @@ const InstantCashPickDetail = () => {
       {
         images: [
           {
-            img: "/images/service/Home.png",
+            img: "/images/service/ServiceHome.png",
             label: "Service Home",
           },
           {
-            img: "/images/service/service21.png",
-            label: "Mobile & Laptop Service",
+            img: "/images/service/ServiceMobileBrands.png",
+            label: "Mobile Service Brands",
           },
           {
-            img: "/images/service/service22.png",
+            img: "/images/service/ServiceMobileProblems.png",
             label: "Select Device Problems",
           },
           {
-            img: "/images/service/service23.png",
-            label: "Book Mobile & Laptop Service",
+            img: "/images/service/ServiceMobileBooking.png",
+            label: "Book Mobile Service",
           },
           {
-            img: "/images/service/service1.png",
+            img: "/images/service/ServiceElectricianBooking.png",
             label: "Book Electrician Service",
           },
           {
-            img: "/images/service/service3.png",
-            label: "Book A/C & Geyser Service",
+            img: "/images/service/ServicePaintingBooking.png",
+            label: "Book Painting Service",
           },
         ],
       },
@@ -173,19 +154,19 @@ const InstantCashPickDetail = () => {
       {
         images: [
           {
-            img: "/images/recycle/Home.png",
+            img: "/images/recycle/RecycleHome.png",
             label: "Recycle Home",
           },
           {
-            img: "/images/recycle/Brands.png",
+            img: "/images/recycle/RecycleBrands.png",
             label: "Recycle Brand",
           },
           {
-            img: "/images/recycle/Products.png",
+            img: "/images/recycle/RecycleProducts.png",
             label: "Recycle Product",
           },
           {
-            img: "/images/recycle/ProductDetail.png",
+            img: "/images/recycle/RecycleProductDetail.png",
             label: "Recycle Product Detail",
           },
           {
@@ -219,7 +200,7 @@ const InstantCashPickDetail = () => {
       </button>
       <div className="relative">
         {/* Logo */}
-        <div className="flex justify-center items-center max-sm:px-2 border-b">
+        <div className="flex flex-col justify-center items-center max-sm:px-2 border-b mb-5">
           {/* <p className="flex flex-col">
             <span className="text-6xl max-sm:text-4xl font-serif font-bold">
               Instant
@@ -230,8 +211,8 @@ const InstantCashPickDetail = () => {
           </p> */}
           <div className="flex justify-center items-center opacity-45">
             <img
-              src="/images/ICP/NewLogo.png"
-              alt="ICP - Logo"
+              src="/images/IH/NewLogo.jpg"
+              alt="IH - Logo"
               className="w-3/5 max-sm:w-4/5"
             />
           </div>
@@ -239,11 +220,21 @@ const InstantCashPickDetail = () => {
 
         {/* Details */}
         <div className="bg-sky-500/2 text-black/95 flex flex-col justify-center items-center rounded-lg">
+          <div>
+            <Link
+              to="https://www.instanthub.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm max-sm:text-xs font-semibold font-serif"
+            >
+              Visit InstantHub
+            </Link>
+          </div>
           {Object.entries(features).map(([key, value], i) => (
             <div
               key={i}
               //   className="relative py-10 even:bg-violet-200 odd:bg-violet-100 px-4"
-              className="relative py-10 w-3/4 max-sm:w-full max-sm:flex max-sm:flex-col max-sm:items-center text-black border-b border-b-white px-4"
+              className={`relative ${i === 0 ? 'pt-4 pb-10' : 'py-10'} w-3/4 max-sm:w-full max-sm:flex max-sm:flex-col max-sm:items-center text-black border-b border-b-white px-4`}
             >
               {/* <div className="z-0 w-[2px] h-[500px] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-45 bg-yellow-500/70"></div> */}
 
@@ -362,4 +353,4 @@ const InstantCashPickDetail = () => {
   );
 };
 
-export default InstantCashPickDetail;
+export default InstantHubDetail;

@@ -10,6 +10,7 @@ import { IoLogoLinkedin, IoIosCall } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa6";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import emailjs from "@emailjs/browser";
+import Chatbot from "./AIChatBot";
 
 const Footer = () => {
   // const [contactInfo, setContactInfo] = useState();
@@ -121,6 +122,8 @@ const Footer = () => {
 
   return (
     <div className="relative mx-8 my-4 max-sm:mx-2 max-sm:my-3 rounded-lg pb-8 max-sm:pb-12 flex max-md:flex-col max-md:gap-10 justify-around items-center h-fit text-sm py-5 bg-blue-600/30">
+      {/* AI */}
+      {/* <div><Chatbot /></div> */}
       {/* Links */}
       <div id="social-links">
         <ul className="flex flex-col max-md:flex-row gap-5 items-start text-xl px-4">
@@ -144,7 +147,6 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-
       {/* Contact Detail */}
       <div
         id="contact-details"
@@ -194,7 +196,6 @@ const Footer = () => {
           </a>
         </div>
       </div>
-
       {/* Form to Stay In Touch */}
       <div id="stayin-touch" className="px-4 max-sm:px-0">
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
@@ -207,7 +208,10 @@ const Footer = () => {
             <div className="flex items-center max-sm:flex-col gap-2 ">
               {/* Name Field */}
               <div>
-                <label htmlFor="contact-me" className="text-lg font-serif max-sm:text-[16px]">
+                <label
+                  htmlFor="contact-me"
+                  className="text-lg font-serif max-sm:text-[16px]"
+                >
                   Name
                 </label>
                 <div className="border bg-white flex justify-center items-center overflow-hidden rounded">
@@ -229,7 +233,10 @@ const Footer = () => {
 
               {/* Email Field */}
               <div>
-                <label htmlFor="contact-me" className="text-lg font-serif max-sm:text-[16px]">
+                <label
+                  htmlFor="contact-me"
+                  className="text-lg font-serif max-sm:text-[16px]"
+                >
                   Email
                 </label>
                 <div className="border flex justify-center items-center bg-white overflow-hidden rounded">
@@ -253,7 +260,10 @@ const Footer = () => {
 
           {/* Message */}
           <div className="flex flex-col justify-center gap-1">
-            <label htmlFor="message" className="text-lg font-serif max-sm:text-[16px]">
+            <label
+              htmlFor="message"
+              className="text-lg font-serif max-sm:text-[16px]"
+            >
               Message
             </label>
             <textarea

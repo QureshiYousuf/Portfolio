@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import InstantCashPickDetail from "./InstantCashPickDetail";
+import InstantHubDetail from "./InstantHubDetail";
 import { useNavigate } from "react-router-dom";
 
 const ECommerce = () => {
@@ -7,7 +7,7 @@ const ECommerce = () => {
   const navigate = useNavigate();
 
   const details = [
-    `Instant Cash Pick is an re-commerce platform where users can sell their used electronic gadgets.`,
+    `Instant Hub is an re-commerce platform where users can sell their used electronic gadgets.`,
     `Customer can sell their old products like mobile phones, laptops, tablets,smartwatches, DSLRs etc to professional buyers.`,
     `It also oﬀers Services such as mobile repairs, laptop repairs, painting, cleaning and more.`,
     `Device recycling for co-friendly disposal and recycling services for old or broken mobiles phones and laptops.`,
@@ -21,8 +21,8 @@ const ECommerce = () => {
       <div className="relative w-full h-[400px] flex justify-center items-center">
         {/* Center Image */}
         <img
-          src="/images/ICP/ICP - Home.png"
-          alt="ICP - Home"
+          src="/images/IH/IH - Home.png"
+          alt="IH - Home"
           className="w-[37%] h-auto rounded-lg shadow-lg z-10"
         />
 
@@ -59,7 +59,7 @@ const ECommerce = () => {
         </button>
       )}
 
-      {showMore && <InstantCashPickDetail />}
+      {showMore && <InstantHubDetail />}
     </div>
   );
 };

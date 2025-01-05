@@ -9,8 +9,8 @@ import {
 import Layout from "./components/Layout";
 import Skills from "./components/Skills";
 import ProfessionalExperience from "./components/ProfessionalExperience";
-import InstantCashPick from "./components/projects/InstantCashPick";
-import InstantCashPickDetail from "./components/projects/InstantCashPickDetail";
+import InstantHub from "./components/projects/InstantHub";
+import InstantHubDetail from "./components/projects/InstantHubDetail";
 
 function App() {
   const router = Router([
@@ -37,7 +37,7 @@ function App() {
         },
         {
           path: "/project/:projectName",
-          element: <InstantCashPickDetail />,
+          element: <InstantHubDetail />,
         },
       ],
     },
