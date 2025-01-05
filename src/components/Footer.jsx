@@ -10,7 +10,6 @@ import { IoLogoLinkedin, IoIosCall } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa6";
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import emailjs from "@emailjs/browser";
-import Chatbot from "./AIChatBot";
 
 const Footer = () => {
   // const [contactInfo, setContactInfo] = useState();
