@@ -164,6 +164,14 @@ const Profile = ({
           : "h-full justify-center"
       }`}
     >
+      <h1
+        className={`absolute text-sm text-violet-800 font-bold top-[10%] sm:hidden ${
+          scrolled && "hidden"
+        }`}
+      >
+        React Developer with 3+ years experience
+      </h1>
+
       {/* Central Profile Image */}
       <div
         className={`z-10 relative flex justify-center items-center ${
@@ -177,14 +185,14 @@ const Profile = ({
           className={`rounded-full object-cover transition-all ${
             scrolled
               ? "w-10 h-full "
-              : "w-72 h-96 rounded-3xl max-sm:w-32 max-sm:h-44"
+              : "w-72 h-96 rounded-3xl max-sm:w-28 max-sm:h-36"
           }`}
         />
         <h1
           className={`text-violet-800 ${
             !scrolled
-              ? "absolute top-[-90px] text-2xl font-bold text-center max-sm:text-sm max-sm:top-[-96%] w-full"
-              : "text-lg max-sm:text-sm font-serif"
+              ? "absolute top-[-90px] text-2xl font-bold text-center max-sm:text-sm max-sm:top-[-96%] max-sm:hidden w-full"
+              : " text-lg max-sm:text-sm font-serif"
           }`}
         >
           <span>React Developer with 3+ years experience</span>
@@ -203,11 +211,11 @@ const Profile = ({
       {!scrolled && (
         <div className="absolute w-full h-full top-0 left-0 text-lg max-sm:text-xs max-sm:text-[10px] ">
           {/* Top Left */}
-          <div className="absolute top-[30%] max-sm:top-[17%] left-[20%] max-sm:left-[10%] text-right max-w-xs max-sm:w-1/4">
+          <div className="absolute top-[30%] max-sm:top-[17%] left-[20%] max-sm:left-[15%] text-right max-w-xs max-sm:w-[30%]">
             {profileSummary[0]}
           </div>
           {/* Top Right */}
-          <div className="absolute top-[30%] max-sm:top-[17%] right-[20%] max-sm:right-[10%] text-left  max-w-xs max-sm:w-1/4">
+          <div className="absolute top-[30%] max-sm:top-[17%] right-[20%] max-sm:right-[15%] text-left  max-w-xs max-sm:w-[30%]">
             {profileSummary[1]}
           </div>
           {/* Left Center */}
@@ -219,11 +227,11 @@ const Profile = ({
             {profileSummary[3]}
           </div>
           {/* Bottom Left */}
-          <div className="absolute bottom-[30%] max-sm:bottom-[17%] left-[20%] max-sm:left-[10%] text-right  max-w-xs max-sm:w-1/4">
+          <div className="absolute bottom-[30%] max-sm:bottom-[17%] left-[20%] max-sm:left-[15%] text-right  max-w-xs max-sm:w-[30%]">
             {profileSummary[4]}
           </div>
           {/* Bottom Right */}
-          <div className="absolute bottom-[30%] max-sm:bottom-[17%] right-[20%] max-sm:right-[10%] text-left  max-w-xs max-sm:w-1/4">
+          <div className="absolute bottom-[30%] max-sm:bottom-[17%] right-[20%] max-sm:right-[15%] text-left  max-w-xs max-sm:w-[30%]">
             {profileSummary[5]}
           </div>
         </div>
